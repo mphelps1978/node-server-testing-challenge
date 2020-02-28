@@ -22,3 +22,29 @@ For this project you will use `Test Driven Development` to create a RESTful API 
 - use `jest` and `supertest` to write the tests.
 - Your API must be able to **create** and **delete** a _resource_ of your choosing.
 - Write a minimum of two tests per route handler.
+
+## NOTES BY MIKE FOR ASSIGNMENT
+
+|:-----------|:---------|:----------------|:-------------------------------------------|
+|    Spec    | Endpoint |      Path       |  Notes                                     |
+|:-----------|:---------|:----------------|:-------------------------------------------|
+|List Users  | GET      | /api/users      | Filtered by dept except admin who sees all |
+|Create User | POST     | /api/users      | Admin Only                                 |
+|Delete User | DELETE   | /api/users/:id  | Admin Only                                 |
+|Update User | PUT      | /api/users/:id  | Admin and Self                             |
+|Login User  | POST     | /api/auth       | Issue Token                                |
+|Logout User | GET      | /api/auth       |                                            |
+|:-----------|:---------|:----------------|:-------------------------------------------|
+
+## Auth Handling
+
+JWT with 30Min expiration
+
+## DB Design
+
+usersTable:
+  - ID (increment)
+  - userName (text, 256)
+  - password (text, 50)
+  - department (text, 255)
+  - token (boolean)
