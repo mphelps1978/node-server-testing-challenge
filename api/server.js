@@ -1,4 +1,6 @@
-require('dotenv').config
+require('dotenv').config({
+  directory: '../config/'
+})
 
 const express = require('express');
 const helmet = require('helmet');
